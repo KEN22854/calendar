@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Календарь — BookCal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="header-host"></div>
+
+  <main class="container">
+    <div id="sub-banner" class="sub-banner empty">Загрузка абонемента…</div>
+
+    <div class="card">
+      <div class="calendar-header">
+        <div class="calendar-title" id="calendar-title">—</div>
+        <div class="calendar-controls" id="calendar-controls"></div>
+      </div>
+
+      <div class="weekdays">
+        <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+      </div>
+      <div class="grid" id="calendar-grid"></div>
+    </div>
+  </main>
+
+  <!-- Модалка слота (свободный / занятый) -->
+  <div class="modal-backdrop" id="slot-modal">
+    <div class="modal" id="slot-modal-body"></div>
+  </div>
+
+  <div class="loading-overlay" id="loading"><div class="spinner"></div></div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/calendar.js"></script>
+</body>
+</html>

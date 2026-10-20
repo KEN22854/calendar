@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вход — BookCal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="card auth-card">
+      <h2 class="page-title">Вход</h2>
+      <form id="login-form">
+        <div class="field"><label>Логин</label>
+          <input class="input" name="username" type="text" required minlength="3" />
+        </div>
+        <div class="field"><label>Пароль</label>
+          <input class="input" name="password" type="password" required minlength="6" />
+        </div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Войти</button></div>
+      </form>
+      <p class="auth-hint">Нет аккаунта? <a href="/register">Зарегистрироваться</a></p>
+    </div>
+  </div>
+  <div class="loading-overlay" id="loading"><div class="spinner"></div></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

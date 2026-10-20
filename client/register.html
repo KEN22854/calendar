@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Регистрация — BookCal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="card auth-card">
+      <h2 class="page-title">Регистрация</h2>
+      <form id="register-form">
+        <div class="field"><label>Логин (3–32 символа, латиница/цифры/._-)</label>
+          <input class="input" name="username" type="text" required minlength="3" maxlength="32" />
+        </div>
+        <div class="field"><label>Пароль (мин. 6 символов)</label>
+          <input class="input" name="password" type="password" required minlength="6" />
+        </div>
+        <div class="field"><label>Подтверждение пароля</label>
+          <input class="input" name="confirmPassword" type="password" required minlength="6" />
+        </div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Зарегистрироваться</button></div>
+      </form>
+      <p class="auth-hint">Уже есть аккаунт? <a href="/login">Войти</a></p>
+    </div>
+  </div>
+  <div class="loading-overlay" id="loading"><div class="spinner"></div></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

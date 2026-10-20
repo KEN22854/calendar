@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Мои брони — BookCal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="header-host"></div>
+
+  <main class="container">
+    <div id="sub-banner" class="sub-banner empty">Загрузка абонемента…</div>
+
+    <div class="card">
+      <h2 class="page-title">Мои брони</h2>
+      <div class="bookings-list" id="bookings-list">
+        <div class="empty">Загрузка…</div>
+      </div>
+    </div>
+  </main>
+
+  <div class="loading-overlay" id="loading"><div class="spinner"></div></div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/my-bookings.js"></script>
+</body>
+</html>

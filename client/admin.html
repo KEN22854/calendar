@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Админ-панель — BookCal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="header-host"></div>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <h3>Разделы</h3>
+      <nav class="admin-nav" id="admin-nav">
+        <button data-tab="calendar" class="active">Календарь</button>
+        <button data-tab="bookings">Список броней</button>
+        <button data-tab="audit">История (аудит)</button>
+        <button data-tab="users">Ученики</button>
+        <button data-tab="subs">Абонементы</button>
+        <button data-tab="slots">Слоты</button>
+      </nav>
+    </aside>
+
+    <main class="admin-main" id="admin-main"></main>
+  </div>
+
+  <div class="modal-backdrop" id="modal"><div class="modal" id="modal-body"></div></div>
+  <div class="loading-overlay" id="loading"><div class="spinner"></div></div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
